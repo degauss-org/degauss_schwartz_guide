@@ -98,7 +98,7 @@ B|85.4|59.5|36.2|219
 
 ### Linking to the nearest "grid"
 
-- [s2](https://s3geometry.io) geohashes are used to link to nearby grids
+- [s2](https://s2geometry.io) geohashes are used to link to nearby grids
 - the query point is geohashed and used to find nearby grid centroids
 - the Great Circle distance is used to determine the closest grid point to the query point
 - returns a `sitecode`, which uniquely identifies a grid cell
