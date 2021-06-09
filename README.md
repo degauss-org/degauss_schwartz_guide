@@ -23,7 +23,13 @@ If you have used DeGAUSS, would you mind providing us some feedback and completi
 |B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11 |
 |C|35.8718|-78.6385|2004-01-30|2004-02-02|2003-05-02 |
 
-## 2. Use geolocation to find grid identifier
+## 2. Authenticate With Docker
+
+- the DeGAUSS images used in the following steps can only be accessed if authorized using a DockerHub account
+- create a [DockerHub](https://hub.docker.com/) account if you don't have one already and send your username to the maintainers
+- run `docker login` and enter your DockerHub username and password as prompted
+
+## 3. Use geolocation to find grid identifier
 
 - example DeGAUSS call:
 
@@ -39,7 +45,7 @@ docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup:0.4.1 my_address_file_
 |B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11|324003|208050280324 |
 |C|35.8718|-78.6385|2004-01-30|2004-02-02|2003-05-02|9784599|211050904096 |
 
-## 3. Use grid identifers and dates to get exposure estimates
+## 4. Use grid identifers and dates to get exposure estimates
 
 - example DeGAUSS call:
 
@@ -63,7 +69,7 @@ B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11|324003|208050280324|2008-11
 B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11|324003|208050280324|2008-11-15|9q5cm2|9q5|2008|9q5|36.9|66.8|33|218
 B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11|324003|208050280324|2008-11-16|9q5cm2|9q5|2008|9q5|85.4|59.5|36.2|219
 
-## 4. Remove potential identifiers
+## 5. Remove potential identifiers
 
 - this resulting data set satifies HIPAA "Safe Harbor" guidelines and is not considered PHI
 
