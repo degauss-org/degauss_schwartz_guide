@@ -17,7 +17,7 @@ If you have used DeGAUSS, would you mind providing us some feedback and completi
 
 - for example, `my_address_file_geocoded.csv`:
 
-|id|lat|lon|start_date|end_date|index_date
+|id|lat|lon|start_date|end_date|index_date|
 |:--:|:---:|:---:|:----------:|:--------:|:---------:|
 |A|39.1967|-84.5826|2000-10-20|2000-10-23|2000-02-14 |
 |B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11 |
@@ -39,8 +39,8 @@ docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup:0.4.1 my_address_file_
 
 - results in `my_address_file_geocoded_schwartz_site_index.csv`:
 
-|id|lat|lon|start_date|end_date|index_date|site_index|sitecode
-|:--:|:---:|:---:|:----------:|:--------:|:---------:|:---------:|
+|id|lat|lon|start_date|end_date|index_date|site_index|sitecode|
+|:--:|:---:|:---:|:----------:|:--------:|:---------:|:---------:|:---------:|
 |A|39.1967|-84.5826|2000-10-20|2000-10-23|2000-02-14|9607238|211050640897 |
 |B|33.9729|-118.2328|2008-11-14|2008-11-16|2008-04-11|324003|208050280324 |
 |C|35.8718|-78.6385|2004-01-30|2004-02-02|2003-05-02|9784599|211050904096 |
@@ -50,12 +50,12 @@ docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup:0.4.1 my_address_file_
 - example DeGAUSS call:
 
 ```
-docker run --rm -v $PWD:/tmp degauss/schwartz:0.5.1 my_address_file_geocoded_schwartz_site_index.csv
+docker run --rm -v $PWD:/tmp degauss/schwartz:0.5.4 my_address_file_geocoded_schwartz_site_index.csv
 ```
 
 - results in `my_address_file_geocoded_schwartz_site_index_schwartz.csv`
 
-id|lat|lon|start_date|end_date|index_date|site_index|sitecode|date|gh6|gh3|year|gh3_combined|PM25|NO2|O3|days_from_index_date
+id|lat|lon|start_date|end_date|index_date|site_index|sitecode|date|gh6|gh3|year|gh3_combined|PM25|NO2|O3|days_from_index_date|
 |:--:|:---:|:---:|:----------:|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 A|39.1967|-84.5826|2000-10-20|2000-10-23|2000-02-14|9607238|211050640897|2000-10-20|dngz52|dng|2000|dng|22.6|64.1|48.5|249
 A|39.1967|-84.5826|2000-10-20|2000-10-23|2000-02-14|9607238|211050640897|2000-10-21|dngz52|dng|2000|dng|37.2|48.4|49.5|250
