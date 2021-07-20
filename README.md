@@ -50,7 +50,7 @@ docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup:0.4.1 my_address_file_
 - example DeGAUSS call:
 
 ```
-docker run --rm -v $PWD:/tmp degauss/schwartz:0.5.4 my_address_file_geocoded_schwartz_site_index.csv
+docker run --rm -v $PWD:/tmp degauss/schwartz:0.5.5 my_address_file_geocoded_schwartz_site_index.csv
 ```
 
 - results in `my_address_file_geocoded_schwartz_site_index_schwartz.csv`
