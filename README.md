@@ -2,7 +2,7 @@
 
 This step-by-step guide covers how to add daily spatiotemporal PM25, NO2, and O3 estimates from models created by Joel Schwartz and used within CREW. We assume that the user starts with geocoded data, but DeGAUSS can also be used to geocode address data if needed. 
 
-For detailed documentation on DeGAUSS, including general usage and installation, please see [https://degauss.org](https://degauss.org).
+Please note that each of these [DeGAUSS commands](https://degauss.org/using_degauss.html#DeGAUSS_Commands) will use the most recent version of each container, but [older](https://hub.docker.com/repository/docker/degauss/schwartz) [versions](https://hub.docker.com/repository/docker/degauss/schwartz_grid_lookup) can be specified for each. For detailed documentation on DeGAUSS, including general usage and installation, please see [https://degauss.org](https://degauss.org).
 
 If you have used DeGAUSS, would you mind providing us some feedback and completing a short [survey](https://redcap.link/gvhbxfjd)?
 
@@ -28,7 +28,7 @@ If you have used DeGAUSS, would you mind providing us some feedback and completi
 - example DeGAUSS call:
 
 ```
-docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup:0.4.1 my_address_file_geocoded.csv
+docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup my_address_file_geocoded.csv
 ```
 
 - results in `my_address_file_geocoded_schwartz_site_index.csv`:
@@ -44,7 +44,7 @@ docker run --rm -v $PWD:/tmp degauss/schwartz_grid_lookup:0.4.1 my_address_file_
 - example DeGAUSS call:
 
 ```
-docker run --rm -v $PWD:/tmp degauss/schwartz:0.5.5 my_address_file_geocoded_schwartz_site_index.csv
+docker run --rm -v $PWD:/tmp degauss/schwartz my_address_file_geocoded_schwartz_site_index.csv
 ```
 
 - results in `my_address_file_geocoded_schwartz_site_index_schwartz.csv`
